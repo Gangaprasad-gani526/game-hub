@@ -1,5 +1,5 @@
 import type { Game } from '@/hooks/useGames'
-import { Image, Card, Text, Heading, HStack } from '@chakra-ui/react'
+import { Image, Card, Heading, HStack } from '@chakra-ui/react'
 import PlatformIconList from '../PlatformIconList'
 import CrticScore from '../CrticScore'
 import getCropImageURL from '@/services/image-url'

@@ -1,5 +1,5 @@
 import useGenres, { type Genres } from '@/hooks/useGenres'
-import { Button, HStack, Image, ListItem, ListRoot, Spinner, Text } from '@chakra-ui/react'
+import { Button, HStack, Image, ListItem, ListRoot, Spinner } from '@chakra-ui/react'
 import getCropImageURL from '@/services/image-url'
 
 interface Props{
@@ -16,7 +16,7 @@ const GenreList = ({selectedGenre, onSelectedGenre}: Props ) => {
             {genres.map(genre => <ListItem key={genre.id} paddingY={'5px'}>
                 <HStack>
                      <Image boxSize={'32px'} borderRadius={8} src = {getCropImageURL(genre.image_background)}/>
-                    <Button fontWeight={genre.id=== selectedGenre?.id? 'bold' : 'normal'} onClick={()=>{onSelectedGenre(genre)}} fontSize='lg' variant='link'>{genre.name}</Button>
+                    <Button fontWeight={genre.id=== selectedGenre?.id? 'bold' : 'normal'} onClick={()=>{onSelectedGenre(genre)}} fontSize='lg'>{genre.name}</Button>
                 </HStack>
             </ListItem>)}
         </ListRoot>

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import type { Game } from "./useGames";
 import apiClient from "@/services/api-client";
 
 export interface Genres{
@@ -16,7 +15,6 @@ interface FetchGenresResponse{
 }
 
 const useGenres = () => {
-    const [games, setGames] = useState<Game[]>([]);
     const [genres, setGenres] = useState<Genres[]>([]);
         const [error, setError] = useState('');
         const [isLoading, setLoading] = useState(false);

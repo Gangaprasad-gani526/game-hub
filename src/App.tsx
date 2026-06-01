@@ -8,7 +8,6 @@ import { type Genres } from '@/hooks/useGenres'
 
 function App() {
 const [selectedGenre, setSelectedGenre]=useState<Genres | null>(null)
-const [searchText, setSearchText]=useState<string>('')
 
   return <Grid 
   templateAreas={`"nav nav" "aside main"`}
@@ -17,9 +16,7 @@ const [searchText, setSearchText]=useState<string>('')
   >
 
     <GridItem area="nav">
-      <NavBar onSearch={(text)=> {setSearchText(text)
-        console.log(text+" from search bar app.tsx")
-      }} />
+      <NavBar />
 
     </GridItem>
     <GridItem area="aside" paddingX={5} >
