@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import type { Game } from "./useGames";
 import apiClient from "@/services/api-client";
 
-interface Genres{
+export interface Genres{
     id:number
     name: string
+    image_background : string
 
 }
 
