@@ -5,15 +5,15 @@ import GamesGrid from "./components/ui/GamesGrid"
 
 function App() {
   return <Grid templateAreas={`"nav nav" "aside main"`}>
-    <GridItem area = "nav">
-      <NavBar/>
+    <GridItem area="nav">
+      <NavBar />
 
     </GridItem>
-    <GridItem area = "aside" >
+    <GridItem area="aside" >
       aside
 
     </GridItem>
-    <GridItem area = "main" >
+    <GridItem area="main" >
       <GamesGrid></GamesGrid>
 
     </GridItem>
