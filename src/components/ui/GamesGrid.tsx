@@ -4,7 +4,7 @@ import GameCard from './GameCard';
 import GameCardSkeleton from '../GameCardSkeleton';
 import type { Genres } from '@/hooks/useGenres';
 import { SearchContext } from '@/context/SearchTextProvider'
-import { useContext} from 'react';
+import { useContext } from 'react';
 import useSearchGames from '@/hooks/useSearchGames';
 
 interface Props {
@@ -25,7 +25,11 @@ const GamesGrid = ({ selectedGenre }: Props) => {
   return (
     <>
       {finalErrorSearch && <Text>{error}</Text>}
-      {(finalGames.length==0) && <Heading>No Results Found with string : {data}</Heading>}
+      {!finalIsLoading && finalGames.length === 0 && (
+        <Heading>
+          No Results Found for: {data}
+        </Heading>
+      )}
 
       <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} gap={3}>
         {finalIsLoading && skeletons.map(skeleton => <GameCardSkeleton key={skeleton} />)}
