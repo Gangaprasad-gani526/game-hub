@@ -6,6 +6,7 @@ import { useState } from "react"
 import { type Genres } from '@/hooks/useGenres'
 
 
+
 function App() {
 const [selectedGenre, setSelectedGenre]=useState<Genres | null>(null)
 
